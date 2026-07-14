@@ -1,3 +1,4 @@
+--User Defined functions
 CREATE OR REPLACE FUNCTION NthHighestSalary(N INT) RETURNS TABLE (Salary INT) AS $$
 BEGIN
   RETURN QUERY (
