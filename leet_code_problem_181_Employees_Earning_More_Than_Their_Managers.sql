@@ -1,3 +1,4 @@
+-- self join
 select e1.name as employee
 from Employee e1 inner join Employee e2
 on e1.managerId = e2.id
