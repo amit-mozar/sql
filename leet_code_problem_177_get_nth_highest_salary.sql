@@ -1,5 +1,7 @@
 --User Defined functions
-CREATE OR REPLACE FUNCTION NthHighestSalary(N INT) RETURNS TABLE (Salary INT) AS $$
+CREATE OR REPLACE FUNCTION NthHighestSalary(N INT) 
+RETURNS TABLE (Salary INT) AS 
+$$
 BEGIN
   RETURN QUERY (
     select coalesce((
@@ -10,8 +12,7 @@ BEGIN
         where temp.dr = N 
         limit 1
     ), NULL
-   ) as getNthHighestSalary
-      
+   ) as getNthHighestSalary  
   );
 END;
 $$ LANGUAGE plpgsql;
